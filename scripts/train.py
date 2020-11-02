@@ -5,10 +5,10 @@ import torch
 import torch_ac
 import tensorboardX
 import sys
-
+import inspect
 import utils
 from model import ACModel
-
+import gym_minigrid.envs as minigrid_envs
 
 # Parse arguments
 
@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser()
 ## General parameters
 parser.add_argument("--algo", required=True,
                     help="algorithm to use: a2c | ppo (REQUIRED)")
-parser.add_argument("--env", required=True,
+parser.add_argument("--env", required=False,
                     help="name of the environment to train on (REQUIRED)")
 parser.add_argument("--model", default=None,
                     help="name of the model (default: {ENV}_{ALGO}_{TIME})")
@@ -98,7 +98,19 @@ txt_logger.info(f"Device: {device}\n")
 
 envs = []
 for i in range(args.procs):
-    envs.append(utils.make_env(args.env, args.seed + 10000 * i))
+#     num_vertical_crossings, num_horizontal_crossings = 0,1
+#     envs.append(utils.make_env(num_vertical_crossings, num_horizontal_crossings, args.seed + 10000 * i))
+    # envs.append(utils.make_env(0, 1, args.seed + 1000*i))
+    # envs.append(utils.make_env(3, 0, args.seed + 1000*i))
+    env = minigrid_envs.SimpleCrossingS9N1Env()
+    print(env.mission)
+    print(env)
+    envs.append(env)
+    env = minigrid_envs.SimpleCrossingS9N1Env()
+    print(env.mission)
+    print(env)
+    envs.append(env)
+
 txt_logger.info("Environments loaded\n")
 
 # Load training status

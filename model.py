@@ -79,9 +79,21 @@ class ACModel(nn.Module, torch_ac.RecurrentACModel):
         return self.image_embedding_size
 
     def forward(self, obs, memory):
+        # print('obs_size: ',obs.image.size())
         x = obs.image.transpose(1, 3).transpose(2, 3)
+        # print('obs_size_trans: ',x.size())
+
+        task_descriptors = torch.zeros([x.size(0),x.size(1),x.size(2),1])
+        # print(task_descriptors.size())
+
+        # x = torch.cat((x,task_descriptors),3)
+        # print(x.size())
+
         x = self.image_conv(x)
+
+        # print('obs_after_conv: ',x.size())
         x = x.reshape(x.shape[0], -1)
+        # print('obs_after_conv_reshape: ',x.size())
 
         if self.use_memory:
             hidden = (memory[:, :self.semi_memory_size], memory[:, self.semi_memory_size:])
