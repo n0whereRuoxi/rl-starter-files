@@ -9,12 +9,10 @@ class CrossingEnv(MiniGridEnv):
     Environment with wall or lava obstacles, sparse reward.
     """
 
-    def __init__(self, size=9, num_vertical_crossings=0, num_horizontal_crossings=0, num_crossings=0, obstacle_type=Wall, seed=None):
+    def __init__(self, size=9, task_feature=[0,0,0,0,1,0,0,0], num_crossings=0, obstacle_type=Wall, seed=None):
         self.num_crossings = num_crossings
-        self.num_vertical_crossings = num_vertical_crossings
-        self.num_horizontal_crossings = num_horizontal_crossings
         self.obstacle_type = obstacle_type
-        self.task_feature = [0,0,0,0,1,0,0,0]
+        self.task_feature = task_feature
         super().__init__(
             grid_size=size,
             max_steps=4*size*size,
@@ -55,12 +53,13 @@ class CrossingEnv(MiniGridEnv):
             h_rivers = [(h, j) for j in range(2, width - 2, 2)]
             self.np_random.shuffle(v_rivers)
             self.np_random.shuffle(h_rivers)
-            rivers = v_rivers[:self.num_vertical_crossings] + h_rivers[:self.num_horizontal_crossings]  # sample random rivers
+            num_vertical_crossings = 1 if self.task_feature[0] else 0
+            num_horizontal_crossings = 0 if self.task_feature[0] else 1
+            rivers = v_rivers[:num_vertical_crossings] + h_rivers[:num_horizontal_crossings]  # sample random rivers
 
         rivers_v = sorted([pos for direction, pos in rivers if direction is v])
         rivers_h = sorted([pos for direction, pos in rivers if direction is h])
-        self.num_vertical_crossings = len(rivers_v)
-        self.num_horizontal_crossings = len(rivers_h)
+
         obstacle_pos = itt.chain(
             itt.product(range(1, width - 1), rivers_h),
             itt.product(rivers_v, range(1, height - 1)),
@@ -82,20 +81,12 @@ class CrossingEnv(MiniGridEnv):
         for direction in path:
             if direction is h:
                 i = limits_v[room_i + 1]
-                # if self.num_vertical_crossings == 3:
-                    # print(range(limits_h[room_j] + 1, limits_h[room_j + 1]),pos[wall_index])
-                j = self.np_random.choice(range(limits_h[room_j] + 1, limits_h[room_j + 1]))
-                # j = range(limits_h[room_j] + 1, limits_h[room_j + 1])[pos[wall_index]]
-                    # wall_index += 1
-                # else:
-                #     j = range(limits_h[room_j] + 1, limits_h[room_j + 1])[4]
-
+                # j = self.np_random.choice(range(limits_h[room_j] + 1, limits_h[room_j + 1]))
+                j = self.task_feature[1:].index(1) + 1
                 room_i += 1
             elif direction is v:
-                # if self.num_vertical_crossings == 3:
-                # i = range(limits_v[room_i] + 1, limits_v[room_i + 1])[3]
-                # else:
-                i = self.np_random.choice(range(limits_v[room_i] + 1, limits_v[room_i + 1]))
+                # i = self.np_random.choice(range(limits_v[room_i] + 1, limits_v[room_i + 1]))
+                i = self.task_feature[1:].index(1) + 1
                 j = limits_h[room_j + 1]
                 room_j += 1
             else:
@@ -103,10 +94,10 @@ class CrossingEnv(MiniGridEnv):
             self.grid.set(i, j, None)
 
         self.mission = (
-            # "avoid the lava and get to the green goal square"
-            # if self.obstacle_type == Lava
-            # else "find the opening and get to the green goal square"
-            'cross {} vertical walls and {} horizontal walls'.format(self.num_vertical_crossings, self.num_horizontal_crossings)
+            "avoid the lava and get to the green goal square"
+            if self.obstacle_type == Lava
+            else "find the opening and get to the green goal square"
+            # 'cross {} vertical walls and {} horizontal walls'.format(self.num_vertical_crossings, self.num_horizontal_crossings)
         )
 
 class LavaCrossingEnv(CrossingEnv):
@@ -145,15 +136,10 @@ register(
     entry_point='gym_minigrid.envs:LavaCrossingS11N5Env'
 )
 
-class SimpleCrossingEnv(CrossingEnv):
-    def __init__(self):
-        super().__init__(size=9, num_vertical_crossings=1, obstacle_type=Wall)
-    def info(self):
-        print(self.__class__)
 
-class SimpleCrossingS9N1Env(CrossingEnv):
-    def __init__(self):
-        super().__init__(size=9, num_crossings=1, obstacle_type=Wall)
+class SimpleCrossingTaskFeature(CrossingEnv):
+    def __init__(self, task_feature=[0,0,0,0,1,0,0,0]):
+        super().__init__(size=9, task_feature=task_feature, obstacle_type=Wall)
 
 class SimpleCrossingS9N2Env(CrossingEnv):
     def __init__(self):
