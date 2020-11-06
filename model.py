@@ -52,6 +52,9 @@ class ACModel(nn.Module, torch_ac.RecurrentACModel):
         self.embedding_size = self.semi_memory_size
         if self.use_text:
             self.embedding_size += self.text_embedding_size
+        
+        # resize for the task feature
+        self.embedding_size += 8
 
         # Define actor's model
         self.actor = nn.Sequential(
@@ -83,9 +86,6 @@ class ACModel(nn.Module, torch_ac.RecurrentACModel):
         x = obs.image.transpose(1, 3).transpose(2, 3)
         # print('obs_size_trans: ',x.size())
 
-        task_descriptors = torch.zeros([x.size(0),x.size(1),x.size(2),1])
-        # print(task_descriptors.size())
-
         # x = torch.cat((x,task_descriptors),3)
         # print(x.size())
 
@@ -95,6 +95,12 @@ class ACModel(nn.Module, torch_ac.RecurrentACModel):
         x = x.reshape(x.shape[0], -1)
         # print('obs_after_conv_reshape: ',x.size())
 
+
+        # task_descriptors = torch.zeros([x.size(0),x.size(1),x.size(2),1])
+        # print(x.size())
+        # print(torch.tensor(obs.task_feature).size())
+        # concat task feature
+        x = torch.cat((x, torch.tensor(obs.task_feature)), dim=1)
         if self.use_memory:
             hidden = (memory[:, :self.semi_memory_size], memory[:, self.semi_memory_size:])
             hidden = self.memory_rnn(x, hidden)

@@ -14,6 +14,7 @@ class CrossingEnv(MiniGridEnv):
         self.num_vertical_crossings = num_vertical_crossings
         self.num_horizontal_crossings = num_horizontal_crossings
         self.obstacle_type = obstacle_type
+        self.task_feature = [0,0,0,0,1,0,0,0]
         super().__init__(
             grid_size=size,
             max_steps=4*size*size,

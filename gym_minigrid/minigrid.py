@@ -1212,7 +1212,8 @@ class MiniGridEnv(gym.Env):
         obs = {
             'image': image,
             'direction': self.agent_dir,
-            'mission': self.mission
+            'mission': self.mission,
+            'task_feature': self.task_feature if self.task_feature else None
         }
 
         return obs
