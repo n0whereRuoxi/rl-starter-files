@@ -54,7 +54,7 @@ class ACModel(nn.Module, torch_ac.RecurrentACModel):
             self.embedding_size += self.text_embedding_size
         
         # resize for the task feature
-        self.embedding_size += 8
+        self.embedding_size += 2
 
         # Define actor's model
         self.actor = nn.Sequential(

@@ -82,11 +82,11 @@ class CrossingEnv(MiniGridEnv):
             if direction is h:
                 i = limits_v[room_i + 1]
                 # j = self.np_random.choice(range(limits_h[room_j] + 1, limits_h[room_j + 1]))
-                j = self.task_feature[1:].index(1) + 1
+                j = (8-self.task_feature[1])
                 room_i += 1
             elif direction is v:
                 # i = self.np_random.choice(range(limits_v[room_i] + 1, limits_v[room_i + 1]))
-                i = self.task_feature[1:].index(1) + 1
+                i = self.task_feature[1]
                 j = limits_h[room_j + 1]
                 room_j += 1
             else:

@@ -31,6 +31,9 @@ parser.add_argument("--procs", type=int, default=16,
                     help="number of processes (default: 16)")
 parser.add_argument("--frames", type=int, default=10**7,
                     help="number of frames of training (default: 1e7)")
+parser.add_argument('--spec', type=int, nargs='+', help='<Required> Set flag', required=True)
+# Use like:
+# python arg.py -l 1234 2345 3456 4567
 
 ## Parameters for main algorithm
 parser.add_argument("--epochs", type=int, default=4,
@@ -71,7 +74,10 @@ args.mem = args.recurrence > 1
 date = datetime.datetime.now().strftime("%y-%m-%d-%H-%M-%S")
 default_model_name = f"{args.env}_{args.algo}_seed{args.seed}_{date}"
 
-model_name = args.model or default_model_name
+if args.spec:
+    print(args.spec)
+    model_name = '{}_{}_{}_{}_{}'.format(args.spec[0], args.spec[1], args.spec[2], args.spec[3], date)
+
 model_dir = utils.get_model_dir(model_name)
 
 # Load loggers and Tensorboard writer
@@ -102,7 +108,11 @@ for i in range(args.procs):
 #     envs.append(utils.make_env(num_vertical_crossings, num_horizontal_crossings, args.seed + 10000 * i))
     # envs.append(utils.make_env(0, 1, args.seed + 1000*i))
     # envs.append(utils.make_env(3, 0, args.seed + 1000*i))
-    env = minigrid_envs.SimpleCrossingTaskFeature(task_feature=[1,0,0,0,0,0,0,1])
+    env = minigrid_envs.SimpleCrossingTaskFeature(task_feature=[args.spec[0], args.spec[1]])
+    print(env.mission)
+    print(env)
+    envs.append(env)
+    env = minigrid_envs.SimpleCrossingTaskFeature(task_feature=[args.spec[2], args.spec[3]])
     print(env.mission)
     print(env)
     envs.append(env)
