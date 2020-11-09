@@ -1,0 +1,2 @@
+update,frames,FPS,duration,rreturn_mean,rreturn_std,rreturn_min,rreturn_max,num_frames_mean,num_frames_std,num_frames_min,num_frames_max,entropy,value,policy_loss,value_loss,grad_norm,return_mean,return_std,return_min,return_max
+1,2048,1600.108821640342,1,0.0,0.0,0,0,0.0,0.0,0,0,1.8809169083833694,0.012764456230797805,0.0016239043325185776,0.0019482659408822656,0.05029500035396435,0.0,0.0,0,0

@@ -1,0 +1,41 @@
+/Users/ruoxili/Documents/NRL/rl-starter-files/scripts/train.py --algo ppo --env MiniGrid-LavaCrossingS9N1-v0 --save-interval 10 --frames 8000
+
+Namespace(algo='ppo', batch_size=256, clip_eps=0.2, discount=0.99, entropy_coef=0.01, env='MiniGrid-LavaCrossingS9N1-v0', epochs=4, frames=8000, frames_per_proc=None, gae_lambda=0.95, log_interval=1, lr=0.001, max_grad_norm=0.5, mem=False, model=None, optim_alpha=0.99, optim_eps=1e-08, procs=16, recurrence=1, save_interval=10, seed=1, text=False, value_loss_coef=0.5)
+
+Device: cpu
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (actor): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=64, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 1 | F 002048 | FPS 0545 | D 3 | rR:μσmM 0.04 0.16 0.00 0.65 | F:μσmM 43.8 40.9 0.0 127.0 | H 1.918 | V -0.110 | pL -0.037 | vL 0.003 | ∇ 0.038
+U 2 | F 004096 | FPS 0588 | D 7 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 101.3 74.2 1.0 251.0 | H 1.921 | V -0.069 | pL -0.024 | vL 0.000 | ∇ 0.015
+U 3 | F 006144 | FPS 0498 | D 11 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 80.2 97.4 1.0 324.0 | H 1.936 | V -0.051 | pL -0.021 | vL 0.000 | ∇ 0.010
+U 4 | F 008192 | FPS 0499 | D 15 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 88.8 93.3 1.0 299.0 | H 1.938 | V -0.037 | pL -0.011 | vL 0.000 | ∇ 0.007

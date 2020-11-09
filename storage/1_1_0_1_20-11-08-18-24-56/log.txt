@@ -1,0 +1,56 @@
+-m --algo ppo --save-interval 10 --lr 0.001 --procs 8 --spec 1 1 0 1
+
+Namespace(algo='ppo', batch_size=256, clip_eps=0.2, discount=0.99, entropy_coef=0.01, env=None, epochs=4, frames=10000000, frames_per_proc=None, gae_lambda=0.95, log_interval=1, lr=0.001, max_grad_norm=0.5, mem=False, model=None, optim_alpha=0.99, optim_eps=1e-08, procs=8, recurrence=1, save_interval=10, seed=1, spec=[1, 1, 0, 1], text=False, value_loss_coef=0.5)
+
+Device: cpu
+
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (actor): Sequential(
+    (0): Linear(in_features=66, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=66, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 1 | F 002048 | FPS 1436 | D 1 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 0.0 0.0 0 0 | H 1.930 | V 0.052 | pL 0.011 | vL 0.002 | ∇ 0.039
+U 2 | F 004096 | FPS 1553 | D 2 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 0.0 0.0 0 0 | H 1.928 | V 0.036 | pL 0.006 | vL 0.000 | ∇ 0.011
+U 3 | F 006144 | FPS 1648 | D 4 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.933 | V 0.029 | pL 0.010 | vL 0.000 | ∇ 0.008
+U 4 | F 008192 | FPS 1688 | D 5 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.938 | V 0.025 | pL 0.004 | vL 0.000 | ∇ 0.004
+U 5 | F 010240 | FPS 1684 | D 6 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.942 | V 0.022 | pL 0.004 | vL 0.000 | ∇ 0.005
+U 6 | F 012288 | FPS 1671 | D 7 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.943 | V 0.016 | pL 0.004 | vL 0.000 | ∇ 0.004
+U 7 | F 014336 | FPS 1629 | D 8 | rR:μσmM 0.03 0.11 0.00 0.47 | F:μσmM 315.8 32.0 192.0 324.0 | H 1.935 | V 0.017 | pL -0.002 | vL 0.001 | ∇ 0.014
+U 8 | F 016384 | FPS 1671 | D 10 | rR:μσmM 0.03 0.11 0.00 0.47 | F:μσmM 315.8 32.0 192.0 324.0 | H 1.941 | V 0.012 | pL 0.004 | vL 0.000 | ∇ 0.006
+U 9 | F 018432 | FPS 1655 | D 11 | rR:μσmM 0.03 0.11 0.00 0.47 | F:μσmM 315.8 32.0 192.0 324.0 | H 1.944 | V 0.011 | pL 0.002 | vL 0.000 | ∇ 0.002
+U 10 | F 020480 | FPS 1621 | D 12 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.944 | V 0.009 | pL 0.001 | vL 0.000 | ∇ 0.002
+Status saved
+U 11 | F 022528 | FPS 1106 | D 14 | rR:μσmM 0.01 0.03 0.00 0.13 | F:μσmM 323.2 2.9 312.0 324.0 | H 1.944 | V 0.007 | pL 0.002 | vL 0.000 | ∇ 0.003
+U 12 | F 024576 | FPS 1549 | D 15 | rR:μσmM 0.01 0.03 0.00 0.13 | F:μσmM 323.2 2.9 312.0 324.0 | H 1.945 | V 0.008 | pL 0.001 | vL 0.000 | ∇ 0.002
+U 13 | F 026624 | FPS 1652 | D 17 | rR:μσmM 0.03 0.08 0.00 0.26 | F:μσmM 317.2 17.9 265.0 324.0 | H 1.939 | V 0.010 | pL -0.002 | vL 0.000 | ∇ 0.006
+U 14 | F 028672 | FPS 1676 | D 18 | rR:μσmM 0.03 0.08 0.00 0.26 | F:μσmM 317.2 17.9 265.0 324.0 | H 1.943 | V 0.011 | pL 0.002 | vL 0.000 | ∇ 0.003
+U 15 | F 030720 | FPS 1618 | D 19 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.945 | V 0.009 | pL 0.002 | vL 0.000 | ∇ 0.002
+U 16 | F 032768 | FPS 1638 | D 20 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.945 | V 0.007 | pL 0.002 | vL 0.000 | ∇ 0.001
+U 17 | F 034816 | FPS 1616 | D 22 | rR:μσmM 0.07 0.20 0.00 0.62 | F:μσmM 301.8 58.8 135.0 324.0 | H 1.936 | V 0.016 | pL -0.008 | vL 0.002 | ∇ 0.021
+U 18 | F 036864 | FPS 1124 | D 23 | rR:μσmM 0.08 0.20 0.00 0.62 | F:μσmM 301.6 58.8 135.0 324.0 | H 1.937 | V 0.009 | pL 0.003 | vL 0.000 | ∇ 0.014

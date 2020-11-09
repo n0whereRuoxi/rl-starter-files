@@ -1,0 +1,6 @@
+update,frames,FPS,duration,rreturn_mean,rreturn_std,rreturn_min,rreturn_max,num_frames_mean,num_frames_std,num_frames_min,num_frames_max,entropy,value,policy_loss,value_loss,grad_norm,return_mean,return_std,return_min,return_max
+1,2048,1375.6654919771186,1,0.0,0.0,0,0,0.0,0.0,0,0,1.8867024928331375,0.2146933525800705,0.038141436874866486,0.0017019359802361578,0.06743308383963528,0.0,0.0,0,0
+update,frames,FPS,duration,rreturn_mean,rreturn_std,rreturn_min,rreturn_max,num_frames_mean,num_frames_std,num_frames_min,num_frames_max,entropy,value,policy_loss,value_loss,grad_norm,return_mean,return_std,return_min,return_max
+2,4096,1319.6421226213424,3,0.0,0.0,0,0,0.0,0.0,0,0,1.8957726061344147,0.17209839262068272,0.0286733356770128,0.00039257866228581406,0.035825587051840815,0.0,0.0,0,0
+update,frames,FPS,duration,rreturn_mean,rreturn_std,rreturn_min,rreturn_max,num_frames_mean,num_frames_std,num_frames_min,num_frames_max,entropy,value,policy_loss,value_loss,grad_norm,return_mean,return_std,return_min,return_max
+3,6144,1360.8739874957066,4,0.00798611156642437,0.030930077097716013,0.0,0.12777778506278992,323.375,2.4206145913796355,314.0,324.0,1.889142706990242,0.13201099447906017,0.04390624491497874,0.0028285921143833548,0.05374432515712084,0.00798611156642437,0.030930077097716013,0.0,0.12777778506278992
