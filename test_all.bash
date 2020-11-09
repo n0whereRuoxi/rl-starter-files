@@ -1,5 +1,7 @@
 #!/bin/sh
-for i in {1..3}
+for t in {1..20}
+do
+for i in {1..7}
 do
   for j in $(seq 1 $i)
   do
@@ -10,4 +12,5 @@ do
     echo 1_${i}_1_${j}
     sbatch -n 1 -N 1 --share -t 0:05:00 ./1_${i}_1_${j}.sh
   done
+done
 done

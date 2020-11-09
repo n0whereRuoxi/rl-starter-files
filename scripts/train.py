@@ -9,6 +9,7 @@ import inspect
 import utils
 from model import ACModel
 import gym_minigrid.envs as minigrid_envs
+import random
 
 # Parse arguments
 
@@ -21,8 +22,8 @@ parser.add_argument("--env", required=False,
                     help="name of the environment to train on (REQUIRED)")
 parser.add_argument("--model", default=None,
                     help="name of the model (default: {ENV}_{ALGO}_{TIME})")
-parser.add_argument("--seed", type=int, default=1,
-                    help="random seed (default: 1)")
+parser.add_argument("--seed", type=int, default=random.randint(1,1000000),
+                    help="random seed (default: random)")
 parser.add_argument("--log-interval", type=int, default=1,
                     help="number of updates between two logs (default: 1)")
 parser.add_argument("--save-interval", type=int, default=10,
