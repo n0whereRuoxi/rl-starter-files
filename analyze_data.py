@@ -14,13 +14,17 @@ for d1 in [0,1]:
                 feature = [d1,i,d2,j]
                 for file in os.listdir("/Users/ruoxili/Documents/NRL/rl-starter-files/storage"):
                     if file.startswith('{}_{}_{}_{}'.format(feature[0], feature[1], feature[2], feature[3])):
+                        print(file)
                         flag = True
                 if flag:
                     x = [d1, i]
                     y = [d2, j]
                     d = math.sqrt(sum([(a - b) ** 2 for a, b in zip(x, y)]))
-                    dist_feature_map[d] = feature
-print(dist_feature_map.keys())
+                    if d in dist_feature_map:
+                        dist_feature_map[d].append(feature)
+                    else:
+                        dist_feature_map[d] = [feature]
+print(dist_feature_map)
 
 def closest(lst, K): 
     return lst[min(range(len(lst)), key = lambda i: abs(lst[i]-K))]
@@ -38,6 +42,27 @@ def get_all_data(feature):
 fig1, ax1 = plt.subplots()
 bar_dist = plt.axes([0.15, 0.05, 0.65, 0.03])
 slider_dist = Slider(bar_dist, 'Distance', 0, 10.0)
+
+def plot_data_with_same_dist(dist):
+    feature_list = dist_feature_map[dist]
+    print(feature_list)
+    all_data = []
+    for feature in feature_list:
+        all_data += get_all_data(feature)
+    rreturn_means = []
+    num = 75
+    for i in range(num):
+        rreturn_mean = []
+        for data in all_data:
+            if i < len(data):
+                rreturn_mean.append(data[i][1])
+        rreturn_means.append(rreturn_mean)
+    ax1.cla()
+    ax1.set_title('Dynamic Plot')
+    ax1.set_xlabel('Number of frames X 2048')
+    ax1.set_ylabel('Mean rreturn_mean')
+    ax1.boxplot(rreturn_means)
+
 
 def plot_data(feature):
     all_data = get_all_data(feature)
@@ -64,9 +89,10 @@ def update(val):
     # fig.canvas.draw_idle()
     # print(val)
     dist = closest(list(dist_feature_map.keys()), val)
-    feature = dist_feature_map[dist]
-    # update canvas
-    plot_data(feature)
+    plot_data_with_same_dist(dist)
+    # feature = dist_feature_map[dist]
+    # # update canvas
+    # plot_data(feature)
 
 slider_dist.on_changed(update)
 
