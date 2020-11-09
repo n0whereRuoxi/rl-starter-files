@@ -1,0 +1,264 @@
+-m --algo ppo --save-interval 10 --lr 0.001 --procs 8 --spec 0 7 1 5
+
+Namespace(algo='ppo', batch_size=256, clip_eps=0.2, discount=0.99, entropy_coef=0.01, env=None, epochs=4, frames=10000000, frames_per_proc=None, gae_lambda=0.95, log_interval=1, lr=0.001, max_grad_norm=0.5, mem=False, model=None, optim_alpha=0.99, optim_eps=1e-08, procs=8, recurrence=1, save_interval=10, seed=940138, spec=[0, 7, 1, 5], text=False, value_loss_coef=0.5)
+
+Device: cpu
+
+WGWGWGWGWGWGWGWGWG
+WG>>            WG
+WGWGWGWGWGWGWG  WG
+WG              WG
+WG              WG
+WG              WG
+WG              WG
+WG            GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>    WG      WG
+WG      WG      WG
+WG              WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG    GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>            WG
+WG              WG
+WG              WG
+WGWGWGWGWGWGWG  WG
+WG              WG
+WG              WG
+WG            GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>        WG  WG
+WG          WG  WG
+WG              WG
+WG          WG  WG
+WG          WG  WG
+WG          WG  WG
+WG          WGGGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>            WG
+WGWGWGWGWGWGWG  WG
+WG              WG
+WG              WG
+WG              WG
+WG              WG
+WG            GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>    WG      WG
+WG      WG      WG
+WG              WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG    GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>            WG
+WG              WG
+WG              WG
+WG              WG
+WG              WG
+WGWGWGWGWGWGWG  WG
+WG            GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>WG          WG
+WG  WG          WG
+WG              WG
+WG  WG          WG
+WG  WG          WG
+WG  WG          WG
+WG  WG        GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>            WG
+WG              WG
+WG              WG
+WG              WG
+WG              WG
+WGWGWGWGWGWGWG  WG
+WG            GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>WG          WG
+WG  WG          WG
+WG              WG
+WG  WG          WG
+WG  WG          WG
+WG  WG          WG
+WG  WG        GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>            WG
+WG              WG
+WG              WG
+WG              WG
+WG              WG
+WGWGWGWGWGWGWG  WG
+WG            GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>WG          WG
+WG  WG          WG
+WG              WG
+WG  WG          WG
+WG  WG          WG
+WG  WG          WG
+WG  WG        GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>            WG
+WGWGWGWGWGWGWG  WG
+WG              WG
+WG              WG
+WG              WG
+WG              WG
+WG            GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>        WG  WG
+WG          WG  WG
+WG              WG
+WG          WG  WG
+WG          WG  WG
+WG          WG  WG
+WG          WGGGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>            WG
+WG              WG
+WG              WG
+WG              WG
+WG              WG
+WGWGWGWGWGWGWG  WG
+WG            GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>    WG      WG
+WG      WG      WG
+WG              WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG    GGWG
+WGWGWGWGWGWGWGWGWG
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 16, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(16, 32, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(32, 64, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (actor): Sequential(
+    (0): Linear(in_features=66, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=66, out_features=64, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 1 | F 002048 | FPS 0679 | D 3 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 0.0 0.0 0 0 | H 1.859 | V -0.693 | pL -0.120 | vL 0.001 | ∇ 0.073
+U 2 | F 004096 | FPS 0669 | D 6 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 0.0 0.0 0 0 | H 1.901 | V -0.586 | pL -0.106 | vL 0.001 | ∇ 0.111
+U 3 | F 006144 | FPS 0681 | D 9 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.887 | V -0.441 | pL -0.153 | vL 0.014 | ∇ 0.166
+U 4 | F 008192 | FPS 0667 | D 12 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.881 | V -0.370 | pL -0.064 | vL 0.000 | ∇ 0.074
+U 5 | F 010240 | FPS 0665 | D 15 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.901 | V -0.301 | pL -0.053 | vL 0.000 | ∇ 0.062
+U 6 | F 012288 | FPS 0676 | D 18 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.912 | V -0.235 | pL -0.057 | vL 0.003 | ∇ 0.059
+U 7 | F 014336 | FPS 0665 | D 21 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.924 | V -0.193 | pL -0.034 | vL 0.000 | ∇ 0.036
+U 8 | F 016384 | FPS 0674 | D 24 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.923 | V -0.145 | pL -0.052 | vL 0.002 | ∇ 0.057
+U 9 | F 018432 | FPS 0671 | D 27 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.935 | V -0.123 | pL -0.022 | vL 0.000 | ∇ 0.017
+U 10 | F 020480 | FPS 0667 | D 30 | rR:μσmM 0.01 0.06 0.00 0.24 | F:μσmM 320.9 12.1 274.0 324.0 | H 1.938 | V -0.104 | pL -0.022 | vL 0.001 | ∇ 0.028
+Status saved
+U 11 | F 022528 | FPS 0673 | D 33 | rR:μσmM 0.01 0.06 0.00 0.24 | F:μσmM 320.9 12.1 274.0 324.0 | H 1.938 | V -0.081 | pL -0.022 | vL 0.000 | ∇ 0.028
+U 12 | F 024576 | FPS 0666 | D 36 | rR:μσmM 0.01 0.06 0.00 0.24 | F:μσmM 320.9 12.1 274.0 324.0 | H 1.938 | V -0.068 | pL -0.013 | vL 0.000 | ∇ 0.016
+U 13 | F 026624 | FPS 0679 | D 39 | rR:μσmM 0.02 0.06 0.00 0.26 | F:μσmM 320.4 14.0 266.0 324.0 | H 1.936 | V -0.047 | pL -0.019 | vL 0.000 | ∇ 0.021
+U 14 | F 028672 | FPS 0670 | D 42 | rR:μσmM 0.02 0.09 0.00 0.39 | F:μσmM 317.6 24.9 221.0 324.0 | H 1.934 | V -0.038 | pL -0.011 | vL 0.001 | ∇ 0.030
+U 15 | F 030720 | FPS 0670 | D 45 | rR:μσmM 0.08 0.14 0.00 0.39 | F:μσmM 305.9 34.6 221.0 324.0 | H 1.932 | V -0.023 | pL -0.013 | vL 0.001 | ∇ 0.026
+U 16 | F 032768 | FPS 0674 | D 48 | rR:μσmM 0.08 0.14 0.00 0.39 | F:μσmM 305.6 34.4 221.0 324.0 | H 1.941 | V -0.028 | pL -0.008 | vL 0.000 | ∇ 0.012
+U 17 | F 034816 | FPS 0674 | D 51 | rR:μσmM 0.09 0.19 0.00 0.61 | F:μσmM 301.1 55.8 141.0 324.0 | H 1.939 | V -0.018 | pL -0.012 | vL 0.001 | ∇ 0.050
+U 18 | F 036864 | FPS 0674 | D 55 | rR:μσmM 0.08 0.19 0.00 0.61 | F:μσmM 302.4 56.0 141.0 324.0 | H 1.931 | V -0.003 | pL -0.011 | vL 0.001 | ∇ 0.030
+U 19 | F 038912 | FPS 0668 | D 58 | rR:μσmM 0.09 0.19 0.00 0.73 | F:μσmM 301.2 56.9 98.0 324.0 | H 1.924 | V 0.007 | pL -0.009 | vL 0.002 | ∇ 0.069
+U 20 | F 040960 | FPS 0671 | D 61 | rR:μσmM 0.18 0.23 0.00 0.73 | F:μσmM 275.4 69.4 98.0 324.0 | H 1.921 | V 0.026 | pL -0.008 | vL 0.001 | ∇ 0.033
+Status saved
+U 21 | F 043008 | FPS 0681 | D 64 | rR:μσmM 0.26 0.35 0.00 0.82 | F:μσmM 242.7 107.5 66.0 324.0 | H 1.905 | V 0.051 | pL -0.023 | vL 0.005 | ∇ 0.066
+U 22 | F 045056 | FPS 0673 | D 67 | rR:μσmM 0.48 0.35 0.00 0.85 | F:μσmM 177.2 109.8 54.0 324.0 | H 1.890 | V 0.092 | pL -0.027 | vL 0.006 | ∇ 0.117
+U 23 | F 047104 | FPS 0679 | D 70 | rR:μσmM 0.46 0.36 0.00 0.89 | F:μσmM 182.0 113.4 41.0 324.0 | H 1.864 | V 0.113 | pL -0.030 | vL 0.009 | ∇ 0.158
+U 24 | F 049152 | FPS 0680 | D 73 | rR:μσmM 0.46 0.37 0.00 0.93 | F:μσmM 180.8 118.3 26.0 324.0 | H 1.862 | V 0.099 | pL -0.026 | vL 0.006 | ∇ 0.048
+U 25 | F 051200 | FPS 0681 | D 76 | rR:μσmM 0.60 0.35 0.00 0.93 | F:μσmM 136.3 114.2 24.0 324.0 | H 1.830 | V 0.144 | pL -0.039 | vL 0.012 | ∇ 0.150
+U 26 | F 053248 | FPS 0683 | D 79 | rR:μσmM 0.68 0.34 0.00 0.95 | F:μσmM 109.7 110.0 19.0 324.0 | H 1.758 | V 0.200 | pL -0.056 | vL 0.010 | ∇ 0.084
+U 27 | F 055296 | FPS 0687 | D 82 | rR:μσmM 0.78 0.29 0.00 0.96 | F:μσmM 75.0 92.2 16.0 324.0 | H 1.715 | V 0.255 | pL -0.040 | vL 0.008 | ∇ 0.159
+U 28 | F 057344 | FPS 0684 | D 85 | rR:μσmM 0.76 0.31 0.00 0.96 | F:μσmM 82.3 98.6 16.0 324.0 | H 1.598 | V 0.374 | pL -0.057 | vL 0.010 | ∇ 0.118
+U 29 | F 059392 | FPS 0666 | D 88 | rR:μσmM 0.89 0.09 0.54 0.96 | F:μσmM 37.9 32.0 16.0 167.0 | H 1.610 | V 0.419 | pL -0.042 | vL 0.005 | ∇ 0.061
+U 30 | F 061440 | FPS 0680 | D 91 | rR:μσmM 0.92 0.06 0.56 0.96 | F:μσmM 30.1 22.7 14.0 160.0 | H 1.546 | V 0.440 | pL -0.022 | vL 0.002 | ∇ 0.053
+Status saved
+U 31 | F 063488 | FPS 0680 | D 94 | rR:μσmM 0.84 0.26 0.00 0.96 | F:μσmM 55.0 85.6 14.0 324.0 | H 1.533 | V 0.475 | pL -0.027 | vL 0.005 | ∇ 0.081
+U 32 | F 065536 | FPS 0679 | D 97 | rR:μσmM 0.87 0.19 0.00 0.96 | F:μσmM 45.2 62.3 16.0 324.0 | H 1.472 | V 0.502 | pL -0.013 | vL 0.005 | ∇ 0.086
+U 33 | F 067584 | FPS 0680 | D 100 | rR:μσmM 0.88 0.16 0.00 0.96 | F:μσmM 41.6 53.8 15.0 324.0 | H 1.515 | V 0.534 | pL -0.017 | vL 0.006 | ∇ 0.059
+U 34 | F 069632 | FPS 0680 | D 103 | rR:μσmM 0.89 0.13 0.12 0.96 | F:μσmM 38.7 48.3 14.0 317.0 | H 1.541 | V 0.558 | pL -0.016 | vL 0.008 | ∇ 0.126
+U 35 | F 071680 | FPS 0681 | D 106 | rR:μσmM 0.88 0.15 0.00 0.96 | F:μσmM 43.6 51.9 15.0 324.0 | H 1.456 | V 0.633 | pL -0.042 | vL 0.007 | ∇ 0.125
+U 36 | F 073728 | FPS 0680 | D 109 | rR:μσmM 0.91 0.05 0.65 0.95 | F:μσmM 33.0 18.8 17.0 126.0 | H 1.431 | V 0.631 | pL -0.034 | vL 0.005 | ∇ 0.079
+U 37 | F 075776 | FPS 0689 | D 112 | rR:μσmM 0.91 0.08 0.38 0.96 | F:μσmM 30.9 27.3 15.0 224.0 | H 1.301 | V 0.735 | pL -0.060 | vL 0.005 | ∇ 0.117
+U 38 | F 077824 | FPS 0685 | D 115 | rR:μσmM 0.93 0.03 0.79 0.96 | F:μσmM 25.2 10.6 14.0 76.0 | H 1.225 | V 0.779 | pL -0.042 | vL 0.002 | ∇ 0.045
+U 39 | F 079872 | FPS 0685 | D 118 | rR:μσmM 0.93 0.03 0.76 0.96 | F:μσmM 24.8 11.4 14.0 85.0 | H 1.376 | V 0.801 | pL -0.016 | vL 0.002 | ∇ 0.035
+U 40 | F 081920 | FPS 0686 | D 121 | rR:μσmM 0.93 0.02 0.89 0.96 | F:μσmM 24.7 5.5 15.0 41.0 | H 1.381 | V 0.808 | pL 0.003 | vL 0.001 | ∇ 0.034
+Status saved
+U 41 | F 083968 | FPS 0685 | D 124 | rR:μσmM 0.91 0.05 0.55 0.96 | F:μσmM 30.7 19.2 14.0 162.0 | H 1.417 | V 0.779 | pL 0.026 | vL 0.003 | ∇ 0.058
+U 42 | F 086016 | FPS 0686 | D 127 | rR:μσmM 0.91 0.05 0.61 0.95 | F:μσmM 31.6 17.8 18.0 141.0 | H 1.427 | V 0.773 | pL 0.007 | vL 0.002 | ∇ 0.031
+U 43 | F 088064 | FPS 0688 | D 130 | rR:μσmM 0.92 0.03 0.83 0.95 | F:μσmM 30.2 9.9 18.0 62.0 | H 1.385 | V 0.783 | pL -0.004 | vL 0.002 | ∇ 0.039
+U 44 | F 090112 | FPS 0682 | D 133 | rR:μσmM 0.92 0.03 0.83 0.96 | F:μσmM 28.2 9.4 16.0 62.0 | H 1.424 | V 0.784 | pL -0.003 | vL 0.002 | ∇ 0.029
+U 45 | F 092160 | FPS 0687 | D 136 | rR:μσmM 0.92 0.03 0.80 0.95 | F:μσmM 28.8 11.3 17.0 71.0 | H 1.376 | V 0.791 | pL 0.001 | vL 0.002 | ∇ 0.050
+U 46 | F 094208 | FPS 0686 | D 139 | rR:μσmM 0.92 0.03 0.80 0.96 | F:μσmM 27.2 10.3 16.0 73.0 | H 1.383 | V 0.785 | pL -0.001 | vL 0.002 | ∇ 0.034
+U 47 | F 096256 | FPS 0686 | D 142 | rR:μσmM 0.92 0.05 0.59 0.96 | F:μσmM 29.3 17.7 15.0 149.0 | H 1.395 | V 0.791 | pL -0.003 | vL 0.002 | ∇ 0.052
+U 48 | F 098304 | FPS 0685 | D 145 | rR:μσmM 0.93 0.03 0.76 0.96 | F:μσmM 26.4 9.6 14.0 87.0 | H 1.314 | V 0.809 | pL -0.005 | vL 0.001 | ∇ 0.029
+U 49 | F 100352 | FPS 0682 | D 148 | rR:μσmM 0.93 0.02 0.85 0.96 | F:μσmM 25.4 6.6 16.0 54.0 | H 1.382 | V 0.816 | pL -0.002 | vL 0.001 | ∇ 0.024
+U 50 | F 102400 | FPS 0688 | D 151 | rR:μσmM 0.93 0.02 0.88 0.96 | F:μσmM 26.2 6.5 16.0 44.0 | H 1.409 | V 0.812 | pL 0.002 | vL 0.001 | ∇ 0.024
+Status saved
+U 51 | F 104448 | FPS 0687 | D 154 | rR:μσmM 0.92 0.02 0.80 0.95 | F:μσmM 27.9 8.0 18.0 73.0 | H 1.422 | V 0.800 | pL 0.008 | vL 0.001 | ∇ 0.039
+U 52 | F 106496 | FPS 0685 | D 157 | rR:μσmM 0.92 0.03 0.78 0.95 | F:μσmM 30.1 9.9 18.0 79.0 | H 1.478 | V 0.778 | pL 0.009 | vL 0.002 | ∇ 0.039
+U 53 | F 108544 | FPS 0672 | D 160 | rR:μσmM 0.91 0.03 0.73 0.96 | F:μσmM 31.1 12.1 16.0 99.0 | H 1.461 | V 0.780 | pL 0.002 | vL 0.001 | ∇ 0.030
+U 54 | F 110592 | FPS 0684 | D 163 | rR:μσmM 0.91 0.03 0.73 0.95 | F:μσmM 32.0 12.1 17.0 96.0 | H 1.465 | V 0.775 | pL 0.010 | vL 0.002 | ∇ 0.042
+U 55 | F 112640 | FPS 0686 | D 166 | rR:μσmM 0.91 0.03 0.81 0.95 | F:μσmM 32.4 9.7 17.0 67.0 | H 1.488 | V 0.751 | pL 0.005 | vL 0.002 | ∇ 0.043
+U 56 | F 114688 | FPS 0686 | D 169 | rR:μσmM 0.91 0.05 0.56 0.96 | F:μσmM 31.8 17.3 14.0 157.0 | H 1.444 | V 0.770 | pL -0.005 | vL 0.002 | ∇ 0.044
+U 57 | F 116736 | FPS 0689 | D 172 | rR:μσmM 0.91 0.03 0.81 0.95 | F:μσmM 30.7 9.7 17.0 70.0 | H 1.468 | V 0.777 | pL -0.005 | vL 0.002 | ∇ 0.025
+U 58 | F 118784 | FPS 0688 | D 175 | rR:μσmM 0.92 0.02 0.84 0.95 | F:μσmM 29.4 8.8 17.0 59.0 | H 1.479 | V 0.779 | pL -0.003 | vL 0.002 | ∇ 0.035
+U 59 | F 120832 | FPS 0685 | D 178 | rR:μσmM 0.91 0.05 0.73 0.96 | F:μσmM 33.4 16.8 16.0 96.0 | H 1.474 | V 0.769 | pL 0.017 | vL 0.002 | ∇ 0.038
+U 60 | F 122880 | FPS 0687 | D 181 | rR:μσmM 0.91 0.04 0.75 0.96 | F:μσmM 31.6 13.6 15.0 90.0 | H 1.459 | V 0.772 | pL 0.002 | vL 0.002 | ∇ 0.040
+Status saved
+U 61 | F 124928 | FPS 0688 | D 184 | rR:μσmM 0.92 0.03 0.81 0.96 | F:μσmM 30.0 10.1 16.0 68.0 | H 1.405 | V 0.769 | pL -0.002 | vL 0.002 | ∇ 0.031
+U 62 | F 126976 | FPS 0686 | D 187 | rR:μσmM 0.91 0.04 0.75 0.96 | F:μσmM 30.6 14.1 16.0 89.0 | H 1.420 | V 0.772 | pL -0.001 | vL 0.002 | ∇ 0.036
+U 63 | F 129024 | FPS 0688 | D 190 | rR:μσmM 0.92 0.02 0.85 0.96 | F:μσmM 28.3 7.8 14.0 54.0 | H 1.394 | V 0.794 | pL -0.010 | vL 0.001 | ∇ 0.033
+U 64 | F 131072 | FPS 0687 | D 193 | rR:μσmM 0.92 0.03 0.79 0.95 | F:μσmM 28.1 9.1 17.0 75.0 | H 1.459 | V 0.789 | pL 0.002 | vL 0.001 | ∇ 0.029
+U 65 | F 133120 | FPS 0688 | D 196 | rR:μσmM 0.91 0.03 0.78 0.95 | F:μσmM 31.0 10.8 17.0 79.0 | H 1.439 | V 0.774 | pL -0.000 | vL 0.002 | ∇ 0.033
+U 66 | F 135168 | FPS 0687 | D 199 | rR:μσmM 0.92 0.02 0.84 0.95 | F:μσmM 29.9 8.8 17.0 57.0 | H 1.409 | V 0.780 | pL -0.002 | vL 0.001 | ∇ 0.026
+U 67 | F 137216 | FPS 0688 | D 202 | rR:μσmM 0.92 0.03 0.76 0.95 | F:μσmM 29.3 10.4 17.0 85.0 | H 1.444 | V 0.788 | pL -0.006 | vL 0.001 | ∇ 0.036
+U 68 | F 139264 | FPS 0680 | D 205 | rR:μσmM 0.91 0.04 0.76 0.96 | F:μσmM 32.9 13.8 16.0 86.0 | H 1.488 | V 0.775 | pL 0.022 | vL 0.002 | ∇ 0.040
+U 69 | F 141312 | FPS 0688 | D 208 | rR:μσmM 0.92 0.02 0.83 0.95 | F:μσmM 30.0 8.9 17.0 62.0 | H 1.464 | V 0.777 | pL -0.006 | vL 0.001 | ∇ 0.045
+U 70 | F 143360 | FPS 0689 | D 211 | rR:μσmM 0.91 0.03 0.81 0.94 | F:μσmM 31.0 9.5 20.0 68.0 | H 1.430 | V 0.776 | pL -0.003 | vL 0.002 | ∇ 0.044
+Status saved
+U 71 | F 145408 | FPS 0689 | D 214 | rR:μσmM 0.92 0.02 0.86 0.95 | F:μσmM 30.3 7.5 17.0 50.0 | H 1.462 | V 0.772 | pL -0.010 | vL 0.002 | ∇ 0.051
+U 72 | F 147456 | FPS 0687 | D 217 | rR:μσmM 0.92 0.03 0.79 0.96 | F:μσmM 27.4 9.2 16.0 75.0 | H 1.337 | V 0.788 | pL -0.022 | vL 0.002 | ∇ 0.038
+U 73 | F 149504 | FPS 0689 | D 220 | rR:μσmM 0.93 0.02 0.85 0.96 | F:μσmM 25.7 7.6 14.0 54.0 | H 1.377 | V 0.798 | pL -0.017 | vL 0.001 | ∇ 0.033
+U 74 | F 151552 | FPS 0688 | D 223 | rR:μσmM 0.93 0.02 0.88 0.96 | F:μσmM 26.6 6.4 14.0 43.0 | H 1.386 | V 0.813 | pL -0.004 | vL 0.001 | ∇ 0.033
+U 75 | F 153600 | FPS 0686 | D 226 | rR:μσmM 0.93 0.02 0.88 0.96 | F:μσmM 26.2 6.4 15.0 45.0 | H 1.371 | V 0.810 | pL -0.005 | vL 0.001 | ∇ 0.033
+U 76 | F 155648 | FPS 0684 | D 229 | rR:μσmM 0.92 0.02 0.81 0.96 | F:μσmM 27.6 7.6 15.0 68.0 | H 1.424 | V 0.797 | pL 0.000 | vL 0.001 | ∇ 0.034

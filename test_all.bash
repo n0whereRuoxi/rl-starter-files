@@ -1,5 +1,5 @@
 #!/bin/sh
-for t in {1..5}
+for t in {1..30}
 do
 for i in {1..7}
 do
