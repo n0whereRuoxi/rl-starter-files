@@ -77,7 +77,7 @@ default_model_name = f"{args.env}_{args.algo}_seed{args.seed}_{date}"
 
 if args.spec:
     print(args.spec)
-    model_name = '{}_{}_{}_{}_{}'.format(args.spec[0], args.spec[1], args.spec[2], args.spec[3], date)
+    model_name = 'exp2_{}_{}_{}_{}'.format(args.spec[0], args.spec[1], args.spec[2], date)
 
 model_dir = utils.get_model_dir(model_name)
 
@@ -109,10 +109,10 @@ for i in range(args.procs):
 #     envs.append(utils.make_env(num_vertical_crossings, num_horizontal_crossings, args.seed + 10000 * i))
     # envs.append(utils.make_env(0, 1, args.seed + 1000*i))
     # envs.append(utils.make_env(3, 0, args.seed + 1000*i))
-    env = minigrid_envs.SimpleCrossingTaskFeature(task_feature=[args.spec[0], args.spec[1]])
+    env = minigrid_envs.SimpleCrossingTaskFeature(task_feature=[args.spec[0]])
     txt_logger.info(str(env))
     envs.append(env)
-    env = minigrid_envs.SimpleCrossingTaskFeature(task_feature=[args.spec[2], args.spec[3]])
+    env = minigrid_envs.SimpleCrossingTaskFeature(task_feature=[args.spec[1]])
     txt_logger.info(str(env))
     envs.append(env)
 
@@ -134,8 +134,8 @@ if "vocab" in status:
 txt_logger.info("Observations preprocessor loaded")
 
 # Load model
-
-acmodel = ACModel(obs_space, envs[0].action_space, args.mem, args.text)
+print(args.spec)
+acmodel = ACModel(obs_space, envs[0].action_space, args.mem, args.text, args.spec[2])
 if "model_state" in status:
     acmodel.load_state_dict(status["model_state"])
 acmodel.to(device)

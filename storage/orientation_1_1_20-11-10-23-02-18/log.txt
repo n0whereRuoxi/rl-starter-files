@@ -1,0 +1,192 @@
+/Users/ruoxili/Documents/NRL/rl-starter-files/scripts/train.py --algo ppo --save-interval 10 --lr 0.001 --procs 8 --spec 1 1 14
+
+Namespace(algo='ppo', batch_size=256, clip_eps=0.2, discount=0.99, entropy_coef=0.01, env=None, epochs=4, frames=10000000, frames_per_proc=None, gae_lambda=0.95, log_interval=1, lr=0.001, max_grad_norm=0.5, mem=False, model=None, optim_alpha=0.99, optim_eps=1e-08, procs=8, recurrence=1, save_interval=10, seed=786563, spec=[1, 1, 14], text=False, value_loss_coef=0.5)
+
+Device: cpu
+
+WGWGWGWGWGWGWGWGWG
+WG>>WG          WG
+WG              WG
+WG  WG          WG
+WG  WG          WG
+WG  WG          WG
+WG  WG          WG
+WG  WG        GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>        WG  WG
+WG              WG
+WG          WG  WG
+WG          WG  WG
+WG          WG  WG
+WG          WG  WG
+WG          WGGGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>            WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG    GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>    WG      WG
+WG              WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG    GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>            WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG    GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>    WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG            GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>        WG  WG
+WG          WG  WG
+WG          WG  WG
+WG          WG  WG
+WG          WG  WG
+WG          WG  WG
+WG            GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>    WG      WG
+WG              WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG    GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>WG          WG
+WG  WG          WG
+WG              WG
+WG  WG          WG
+WG  WG          WG
+WG  WG          WG
+WG  WG        GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>WG          WG
+WG  WG          WG
+WG  WG          WG
+WG  WG          WG
+WG              WG
+WG  WG          WG
+WG  WG        GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>    WG      WG
+WG      WG      WG
+WG      WG      WG
+WG              WG
+WG      WG      WG
+WG      WG      WG
+WG      WG    GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>    WG      WG
+WG      WG      WG
+WG              WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG    GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>        WG  WG
+WG          WG  WG
+WG          WG  WG
+WG              WG
+WG          WG  WG
+WG          WG  WG
+WG          WGGGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>WG          WG
+WG  WG          WG
+WG  WG          WG
+WG  WG          WG
+WG  WG          WG
+WG              WG
+WG  WG        GGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>        WG  WG
+WG          WG  WG
+WG          WG  WG
+WG          WG  WG
+WG              WG
+WG          WG  WG
+WG          WGGGWG
+WGWGWGWGWGWGWGWGWG
+WGWGWGWGWGWGWGWGWG
+WG>>    WG      WG
+WG              WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG      WG
+WG      WG    GGWG
+WGWGWGWGWGWGWGWGWG
+Environments loaded
+
+Training status loaded
+
+Observations preprocessor loaded
+Model loaded
+
+ACModel(
+  (image_conv): Sequential(
+    (0): Conv2d(3, 14, kernel_size=(2, 2), stride=(1, 1))
+    (1): ReLU()
+    (2): MaxPool2d(kernel_size=(2, 2), stride=(2, 2), padding=0, dilation=1, ceil_mode=False)
+    (3): Conv2d(14, 28, kernel_size=(2, 2), stride=(1, 1))
+    (4): ReLU()
+    (5): Conv2d(28, 56, kernel_size=(2, 2), stride=(1, 1))
+    (6): ReLU()
+  )
+  (actor): Sequential(
+    (0): Linear(in_features=57, out_features=56, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=56, out_features=7, bias=True)
+  )
+  (critic): Sequential(
+    (0): Linear(in_features=57, out_features=56, bias=True)
+    (1): Tanh()
+    (2): Linear(in_features=56, out_features=1, bias=True)
+  )
+)
+
+Optimizer loaded
+
+U 1 | F 002048 | FPS 1300 | D 1 | rR:μσmM 0.05 0.18 0.00 0.76 | F:μσmM 5.4 21.1 0.0 87.0 | H 1.917 | V 0.029 | pL 0.004 | vL 0.003 | ∇ 0.028
+U 2 | F 004096 | FPS 1477 | D 2 | rR:μσmM 0.05 0.18 0.00 0.76 | F:μσmM 5.4 21.1 0.0 87.0 | H 1.916 | V 0.023 | pL 0.004 | vL 0.000 | ∇ 0.011
+U 3 | F 006144 | FPS 1627 | D 4 | rR:μσmM 0.05 0.18 0.00 0.76 | F:μσmM 309.2 57.4 87.0 324.0 | H 1.933 | V 0.013 | pL 0.005 | vL 0.000 | ∇ 0.006
+U 4 | F 008192 | FPS 1968 | D 5 | rR:μσmM 0.00 0.00 0.00 0.00 | F:μσmM 324.0 0.0 324.0 324.0 | H 1.941 | V 0.012 | pL 0.002 | vL 0.000 | ∇ 0.003
+U 5 | F 010240 | FPS 1716 | D 6 | rR:μσmM 0.05 0.08 0.00 0.28 | F:μσmM 316.4 16.6 261.0 324.0 | H 1.935 | V 0.016 | pL -0.005 | vL 0.000 | ∇ 0.012
+U 6 | F 012288 | FPS 1763 | D 7 | rR:μσmM 0.05 0.08 0.00 0.28 | F:μσmM 316.4 16.6 261.0 324.0 | H 1.939 | V 0.014 | pL 0.003 | vL 0.000 | ∇ 0.005
+U 7 | F 014336 | FPS 1781 | D 8 | rR:μσmM 0.06 0.12 0.00 0.46 | F:μσmM 312.2 31.4 195.0 324.0 | H 1.937 | V 0.020 | pL -0.001 | vL 0.000 | ∇ 0.013
+U 8 | F 016384 | FPS 1859 | D 9 | rR:μσmM 0.06 0.13 0.00 0.46 | F:μσmM 310.8 33.0 195.0 324.0 | H 1.941 | V 0.021 | pL 0.003 | vL 0.000 | ∇ 0.006
+U 9 | F 018432 | FPS 1915 | D 10 | rR:μσmM 0.08 0.16 0.00 0.64 | F:μσmM 305.4 47.3 131.0 324.0 | H 1.938 | V 0.029 | pL -0.004 | vL 0.001 | ∇ 0.030
+U 10 | F 020480 | FPS 1904 | D 12 | rR:μσmM 0.11 0.19 0.00 0.64 | F:μσmM 295.4 55.0 131.0 324.0 | H 1.938 | V 0.015 | pL -0.002 | vL 0.000 | ∇ 0.012
+Status saved

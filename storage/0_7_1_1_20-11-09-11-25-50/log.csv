@@ -1,0 +1,10 @@
+update,frames,FPS,duration,rreturn_mean,rreturn_std,rreturn_min,rreturn_max,num_frames_mean,num_frames_std,num_frames_min,num_frames_max,entropy,value,policy_loss,value_loss,grad_norm,return_mean,return_std,return_min,return_max
+1,2048,1562.1317809128957,1,0.0,0.0,0,0,0.0,0.0,0,0,1.8514558225870132,0.6356702372431755,0.11130446009337902,0.0009332825065939687,0.06677890806409127,0.0,0.0,0,0
+update,frames,FPS,duration,rreturn_mean,rreturn_std,rreturn_min,rreturn_max,num_frames_mean,num_frames_std,num_frames_min,num_frames_max,entropy,value,policy_loss,value_loss,grad_norm,return_mean,return_std,return_min,return_max
+2,4096,1243.7939554918194,2,0.0,0.0,0,0,0.0,0.0,0,0,1.8797170221805573,0.5659208968281746,0.09568500332534313,0.0007955116961966269,0.08098328903624341,0.0,0.0,0,0
+update,frames,FPS,duration,rreturn_mean,rreturn_std,rreturn_min,rreturn_max,num_frames_mean,num_frames_std,num_frames_min,num_frames_max,entropy,value,policy_loss,value_loss,grad_norm,return_mean,return_std,return_min,return_max
+3,6144,1865.493342483514,4,0.0,0.0,0.0,0.0,324.0,0.0,324.0,324.0,1.8744454234838486,0.42568225786089897,0.14118953607976437,0.013716994668357074,0.11881831134812962,0.0,0.0,0.0,0.0
+update,frames,FPS,duration,rreturn_mean,rreturn_std,rreturn_min,rreturn_max,num_frames_mean,num_frames_std,num_frames_min,num_frames_max,entropy,value,policy_loss,value_loss,grad_norm,return_mean,return_std,return_min,return_max
+4,8192,1610.3918103735143,5,0.0,0.0,0.0,0.0,324.0,0.0,324.0,324.0,1.8771593123674393,0.3447657711803913,0.05915095517411828,0.00036437148810364306,0.04648777126197498,0.0,0.0,0.0,0.0
+update,frames,FPS,duration,rreturn_mean,rreturn_std,rreturn_min,rreturn_max,num_frames_mean,num_frames_std,num_frames_min,num_frames_max,entropy,value,policy_loss,value_loss,grad_norm,return_mean,return_std,return_min,return_max
+5,10240,1467.2725845972784,6,0.0,0.0,0.0,0.0,324.0,0.0,324.0,324.0,1.9075119644403458,0.29744188115000725,0.051527367904782295,0.00031341447720478754,0.04787767197894885,0.0,0.0,0.0,0.0

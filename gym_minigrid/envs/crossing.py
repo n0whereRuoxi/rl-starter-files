@@ -9,7 +9,7 @@ class CrossingEnv(MiniGridEnv):
     Environment with wall or lava obstacles, sparse reward.
     """
 
-    def __init__(self, size=9, task_feature=[0,0,0,0,1,0,0,0], num_crossings=0, obstacle_type=Wall, seed=None):
+    def __init__(self, size=9, task_feature=None, num_crossings=0, obstacle_type=Wall, seed=None):
         self.num_crossings = num_crossings
         self.obstacle_type = obstacle_type
         self.task_feature = task_feature
@@ -81,12 +81,12 @@ class CrossingEnv(MiniGridEnv):
         for direction in path:
             if direction is h:
                 i = limits_v[room_i + 1]
-                # j = self.np_random.choice(range(limits_h[room_j] + 1, limits_h[room_j + 1]))
-                j = (8-self.task_feature[1])
+                j = self.np_random.choice(range(limits_h[room_j] + 1, limits_h[room_j + 1]))
+                # j = (8-self.task_feature[1])
                 room_i += 1
             elif direction is v:
-                # i = self.np_random.choice(range(limits_v[room_i] + 1, limits_v[room_i + 1]))
-                i = self.task_feature[1]
+                i = self.np_random.choice(range(limits_v[room_i] + 1, limits_v[room_i + 1]))
+                # i = self.task_feature[1]
                 j = limits_h[room_j + 1]
                 room_j += 1
             else:

@@ -16,26 +16,26 @@ def init_params(m):
 
 
 class ACModel(nn.Module, torch_ac.RecurrentACModel):
-    def __init__(self, obs_space, action_space, use_memory=False, use_text=False):
+    def __init__(self, obs_space, action_space, use_memory=False, use_text=False, size=16):
         super().__init__()
-
+        print(size)
         # Decide which components are enabled
         self.use_text = use_text
         self.use_memory = use_memory
 
         # Define image embedding
         self.image_conv = nn.Sequential(
-            nn.Conv2d(3, 16, (2, 2)),
+            nn.Conv2d(3, size, (2, 2)),
             nn.ReLU(),
             nn.MaxPool2d((2, 2)),
-            nn.Conv2d(16, 32, (2, 2)),
+            nn.Conv2d(size, 2*size, (2, 2)),
             nn.ReLU(),
-            nn.Conv2d(32, 64, (2, 2)),
+            nn.Conv2d(2*size, 4*size, (2, 2)),
             nn.ReLU()
         )
         n = obs_space["image"][0]
         m = obs_space["image"][1]
-        self.image_embedding_size = ((n-1)//2-2)*((m-1)//2-2)*64
+        self.image_embedding_size = ((n-1)//2-2)*((m-1)//2-2)*4*size
 
         # Define memory
         if self.use_memory:
@@ -54,20 +54,20 @@ class ACModel(nn.Module, torch_ac.RecurrentACModel):
             self.embedding_size += self.text_embedding_size
         
         # resize for the task feature
-        self.embedding_size += 2
+        self.embedding_size += 1
 
         # Define actor's model
         self.actor = nn.Sequential(
-            nn.Linear(self.embedding_size, 64),
+            nn.Linear(self.embedding_size, 4*size),
             nn.Tanh(),
-            nn.Linear(64, action_space.n)
+            nn.Linear(4*size, action_space.n)
         )
 
         # Define critic's model
         self.critic = nn.Sequential(
-            nn.Linear(self.embedding_size, 64),
+            nn.Linear(self.embedding_size, 4*size),
             nn.Tanh(),
-            nn.Linear(64, 1)
+            nn.Linear(4*size, 1)
         )
 
         # Initialize parameters correctly
