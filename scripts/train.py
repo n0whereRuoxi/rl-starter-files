@@ -77,7 +77,7 @@ default_model_name = f"{args.env}_{args.algo}_seed{args.seed}_{date}"
 
 if args.spec:
     print(args.spec)
-    model_name = 'exp2_{}_{}_{}_{}'.format(args.spec[0], args.spec[1], args.spec[2], date)
+    model_name = 'exp3_{}_{}_{}_{}'.format(args.spec[0], args.spec[1], args.spec[2], date)
 
 model_dir = utils.get_model_dir(model_name)
 
